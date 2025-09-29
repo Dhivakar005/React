@@ -1,17 +1,13 @@
-import React, { useRef } from 'react';
+//App.js
+import React from 'react';
+import Greeting from './component/Greeting';
 
-export default function App() {
-  const inputRef = useRef();
-
-  const Refchange = () => {
-    console.log("inputRef value -----", inputRef);
-    inputRef.current.style.color = "green";
-  }
-
+const App = () => {
   return (
     <div>
-      <h1 ref={inputRef}>Hello Nakama</h1>
-      <button onClick={Refchange}>Change Color</button>
+      <Greeting />
     </div>
   );
-}
+};
+
+export default App;
